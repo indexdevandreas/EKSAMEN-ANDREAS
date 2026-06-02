@@ -7,77 +7,71 @@
     <link rel="stylesheet" href="style.css">
     <title>Drammen Rør</title>
 </head>
-
 <body>
 
 <nav class="navbar">
   <div class="container">
     <a class="navbar-brand text-white" href="#">Drammen Rør</a>
     <ul class="navbar-nav flex-row gap-3">
-      <li class="nav-item"><a class="nav-link text-white" href="#">Hjem</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#">Tjenester</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#">Kontakt</a></li>
+      <li><a class="nav-link text-white" href="#">Hjem</a></li>
+      <li><a class="nav-link text-white" href="#">Tjenester</a></li>
+      <li><a class="nav-link text-white" href="#">Kontakt</a></li>
     </ul>
   </div>
 </nav>
 
-    <div class="hero-seksjon">
-        <img src="bilder/hero.jpg" alt="Hero-bilde">
-        <div class="centered">
-            <h1>Velkommen til Drammen rør!</h1>
-            <p>Ta kontakt for gratis befaring. Fyll ut skjemaet nedenfor for å kontakte oss.</p>
-        </div>
+<div class="hero-seksjon">
+    <img src="bilder/hero.jpg" alt="Hero-bilde">
+    <div class="centered">
+        <h1>Velkommen til Drammen rør!</h1>
+        <p>Ta kontakt for gratis befaring. Fyll ut skjemaet nedenfor for å kontakte oss.</p>
+    </div>
+</div>
+
+<div class="container mt-4">
+
+    <div class="tjenester mb-4">
+        <h2>Våre tjenester</h2>
+        <ul>
+            <li>Rørleggerarbeid</li>
+            <li>Vannlekkasjer</li>
+            <li>Avløpsrensing</li>
+            <li>Installasjon av sanitærutstyr</li>
+        </ul>
     </div>
 
-    <div class="container mt-4">
-
-        <div class="tjenester mb-4">
-            <h2>Våre tjenester</h2>
-            <ul>
-                <li>Rørleggerarbeid</li>
-                <li>Vannlekkasjer</li>
-                <li>Avløpsrensing</li>
-                <li>Installasjon av sanitærutstyr</li>
-            </ul>
-        </div>
-
-        <div class="Kontaktskjema">
-            <h2>Kontakt oss!</h2>
-            <form action="submit_form.php" method="post">
-
-                <div class="mb-3">
-                    <label for="navn" class="form-label">Navn</label>
-                    <input type="text" class="form-control" id="navn" name="navn" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-post</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="melding" class="form-label">Melding</label>
-                    <textarea class="form-control" id="melding" name="melding" rows="4" required></textarea>
-                </div>
-
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="samtykke" required>
-                    <label class="form-check-label" for="samtykke">Jeg samtykker til at opplysningene behandles</label>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Send</button>
-
-            </form>
-        </div>
-
+    <div class="Kontaktskjema">
+        <h2>Kontakt oss!</h2>
+        <form id="kontaktform">
+            <div class="mb-3">
+                <label for="navn" class="form-label">Navn</label>
+                <input type="text" class="form-control" id="navn" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-post</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="melding" class="form-label">Melding</label>
+                <textarea class="form-control" id="melding" rows="4" required></textarea>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="samtykke" required>
+                <label class="form-check-label" for="samtykke">Jeg samtykker til at opplysningene behandles</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
     </div>
 
-    <script src="script.js"></script>
-</body>
+</div>
 
-
-<footer class="footer">
+<footer>
     <div class="text-center p-3">
         2026 Drammen Rør. Alle rettigheter reservert.
     </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
 </html>
