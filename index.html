@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Drammen Rør</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <hero-seksjon></hero-seksjon>
+
+        
+        <h1>Velkommen til Drammen rør!</h1>
+        <p>Ta kontakt for gratis befaring. Fyll ut skjemaet nedenfor for å kontakte oss.</p>
+
+        <img src="bilder/hero.jpg" alt="Hero-bilde">
+
+    </hero-seksjon>
+
+        <div class="tjenester">
+            <h2>Våre tjenester</h2>
+            <ul>
+                <li>Rørleggerarbeid</li>
+                <li>Vannlekkasjer</li>
+                <li>Avløpsrensing</li>
+                <li>Installasjon av sanitærutstyr</li>
+            </ul>
+
+
+        <!-- Kontaktskjema  -->
+    <div class="Kontaktskjema">
+        <h1>Kontakt oss!</h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">Navn:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">E-post:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Melding:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    
+
+        <script src="script.js"></script>
+</body>
+</html>
