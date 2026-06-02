@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Drammen Rør</title>
-    
 </head>
 
 <body>
 
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">Drammen Rør</a>
+    <ul class="navbar-nav flex-row gap-3">
+      <li class="nav-item"><a class="nav-link text-white" href="#">Hjem</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#">Tjenester</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
     <div class="hero-seksjon">
         <img src="bilder/hero.jpg" alt="Hero-bilde">
-        <div class="centered"> <h1>Velkommen til Drammen rør!</h1>
-        <p>Ta kontakt for gratis befaring. Fyll ut skjemaet nedenfor for å kontakte oss.</p></div>
-   
+        <div class="centered">
+            <h1>Velkommen til Drammen rør!</h1>
+            <p>Ta kontakt for gratis befaring. Fyll ut skjemaet nedenfor for å kontakte oss.</p>
+        </div>
     </div>
 
-        <div class="tjenester">
+    <div class="container mt-4">
+
+        <div class="tjenester mb-4">
             <h2>Våre tjenester</h2>
             <ul>
                 <li>Rørleggerarbeid</li>
@@ -26,27 +39,45 @@
                 <li>Avløpsrensing</li>
                 <li>Installasjon av sanitærutstyr</li>
             </ul>
+        </div>
 
+        <div class="Kontaktskjema">
+            <h2>Kontakt oss!</h2>
+            <form action="submit_form.php" method="post">
 
-        <!-- Kontaktskjema  -->
-    <div class="Kontaktskjema">
-        <h1>Kontakt oss!</h1>
-        <form action="submit_form.php" method="post">
-            <label for="navn">Navn:</label><br>
-            <input type="text" id="navn" name="navn" required><br><br>
+                <div class="mb-3">
+                    <label for="navn" class="form-label">Navn</label>
+                    <input type="text" class="form-control" id="navn" name="navn" required>
+                </div>
 
-            <label for="email">E-post:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-post</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
 
-            <label for="melding">Melding:</label><br>
-            <textarea id="melding" name="melding" rows="4" cols="50" required></textarea>
+                <div class="mb-3">
+                    <label for="melding" class="form-label">Melding</label>
+                    <textarea class="form-control" id="melding" name="melding" rows="4" required></textarea>
+                </div>
 
-            <input type="submit" value="Send">
-        </form>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="samtykke" required>
+                    <label class="form-check-label" for="samtykke">Jeg samtykker til at opplysningene behandles</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send</button>
+
+            </form>
+        </div>
+
     </div>
 
-    
-
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
+
+<footer class="footer">
+    <div class="text-center p-3">
+        2026 Drammen Rør. Alle rettigheter reservert.
+    </div>
 </html>
